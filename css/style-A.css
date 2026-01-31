@@ -337,4 +337,8 @@ body, html {
     flex-direction: column;
     gap: 12px;
   }
+
+  .title {
+    font-size: 30px;
+  }
 }
