@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Varela&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.top-page {
+    position: relative;
+    min-height: 100vh;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    background-image: url('/images/back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(135deg, #111, #000);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    margin-right: 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar nav {
+    margin-right: 40px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+}
+
+.navbar a.active {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero .title {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero .subtitle {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 200;
+    letter-spacing: 25px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #bbb;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Logo du serveur */
+.server-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Détails du serveur */
+.server-details p {
+    margin: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+#server-players {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Nom du serveur plus visible */
+.server-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Animation fadeInUp pour la box */
+.server-info.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #000000;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;  
+}
+
+.bottom-buttons {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.circle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000b9;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.circle-btn img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.circle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+}
+  
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        rgba(0,0,0,0.05) 2px,
+        rgba(0,0,0,0.05) 4px
+    );
+    z-index: 5;
+    animation: scan 1s linear infinite;
+}
+
+@keyframes scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.scanlines::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: flashLine 3s linear infinite;
+}
+
+@keyframes flashLine {
+    0%   { top: -2%; opacity: 0; }
+    10%  { opacity: 0.8; }
+    50%  { top: 100%; opacity: 0; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 15px 0;
+    margin-right: 0;
+  }
+
+  .navbar nav {
+    margin-right: 0;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

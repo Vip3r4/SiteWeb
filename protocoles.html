@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Site-Delta DarkRP - Wiki</title>
+  <link rel="stylesheet" href="css/style-wiki.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="landing-page">
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+    <section class="top-page">
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo du site">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wiki.html" class="active">Wiki</a></li>
+                    <li><a href="news.html">Nouveautés</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <input TYPE="button" VALUE="↩︎" onClick=" history.back();" class="return">
+    <div class="rules-container">
+        <h1 class="rules-title">Protocoles</h1>
+        <h3 class="rules-desc">Voici le protocole à appliquer obligatoirement pour chaque code :</h3><br>
+
+        <div class="section-accordion">
+            <button class="section-title"><span style="color: yellow;">Code Jaune</span></button>
+            <div class="section-content">
+            <ul>
+                <li>
+                    Le <span style="color: yellow;">Code Jaune</span> est déclenché si un seul <span style="color: red;">SCP Hostile</span> est déconfiné. Le personnel doit se mettre à l'abri en attendant que le personnel militaire reconfine le <span style="color: red;">SCP</span>.<br>
+                    <span style="font-size: 14px; color: #ccc;">↪︎ Le <span style="color: yellow;">Code Jaune</span> peut être désactivé si le <span style="color: red;">SCP</span> est mort ou reconfiné.</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="section-accordion">
+            <button class="section-title"><span style="color: red;">Code Rouge</span></button>
+            <div class="section-content">
+            <ul>
+                <li>
+                    Le <span style="color: red;">Code Rouge</span> est déclenché lorsque deux <span style="color: red;">SCP Hostiles</span> ou plus sont déconfinés. L'ensemble du personnel de la fondation doit être escorté par le personnel militaire vers la surface et extrait du site.<br>
+                    <span style="font-size: 14px; color: #ccc;">↪︎ Le <span style="color: red;">Code Rouge</span> ne peut pas être désactivé.</span><br>
+                    <span style="font-size: 14px; color: #ccc;">↪︎ Respawn FIM et Chaos  jusqu'à la fin de la partie.</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="section-accordion">
+            <button class="section-title">Code Noir</button>
+            <div class="section-content">
+            <ul>
+                <li>
+                    Le Code Noir est déclenché si quatre <span style="color: red;">SCP Hostiles</span> ou plus sont déconfinés. Déclenchement automatique de l'Alpha Warhead, qui ne peut pas être désactivé.<br>
+                    <span style="font-size: 14px; color: #ccc;">↪︎ Le Code Noir ne peut pas être désactivé.</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>© 2025 Site-Delta DarkRP. Tous droits réservés. | Fondé par Ysuzen et Vip3r le 01/10/2025</p>
+    </footer>
+    <script src="mouseanimation.js"></script>
+    <script>
+        document.querySelectorAll('.section-title').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parent = btn.parentElement;
+            parent.classList.toggle('active');
+        });
+        });
+
+        document.querySelectorAll('.role-title').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parent = btn.parentElement;
+            parent.classList.toggle('active');
+        });
+        });
+    </script>
+</body>
+</html>

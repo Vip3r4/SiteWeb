@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-A.css">
+    <title>Site-Delta DarkRP - Accueil</title>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <canvas id="particles"></canvas>
+    <div class="scanlines"></div>
+
+    <div class="landing-page">
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+
+    <section class="top-page">
+
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo du site">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="news.html">Nouveautés</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1 class="title">Site-Delta</h1>
+            <p class="subtitle">Le futur du DarkRP sur SCP:SL.</p>
+            <div class="server-info">
+                <img src="images/logo.png" alt="Logo du serveur" class="server-logo">
+                    <div class="server-details">
+                        <p class="server-name">Site-Delta DarkRP</p>
+                        <p class="server-ip">IP : 83.150.218.113:7777</p>
+                        <p>Joueurs en ligne : <span id="playerCount">--</span></p>
+                    </div>
+                </div>
+        </section>
+
+    </section>
+
+    <div class="bottom-buttons">
+        <a href="https://discord.gg/bhrFV2v9FF" class="circle-btn">
+            <img src="images/discord.webp" alt="Lien 1">
+        </a>
+        <a href="https://www.patreon.com/c/sitedeltadarkrp" class="circle-btn">
+            <img src="images/patreon.webp" alt="Lien 2">
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaGZLsJVsORW49kFfOFg_F3wFkdtQKmvbSELeu2SURqbI-Pg/viewform?usp=header" class="circle-btn">
+            <img src="images/forms.png" alt="Lien 3">
+        </a>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Site-Delta DarkRP. Tous droits réservés. | Fondé par Ysuzen et Vip3r le 01/10/2025</p>
+    </footer>
+
+    <script src="mouseanimation.js"></script>
+    <script src="particle.js"></script>
+    <script src="scpinfo.js"></script>
+    <script>
+        async function updatePlayerCount() {
+            try {
+                const res = await fetch("https://api.sitedeltadarkrp.fr/count");
+                const data = await res.json();
+                document.getElementById("playerCount").textContent = `${data.players}/40`;
+            } catch (err) {
+                console.error("Impossible de récupérer le nombre de joueurs", err);
+                document.getElementById("playerCount").textContent = "--/40";
+            }
+        }
+        
+        setInterval(updatePlayerCount, 5000);
+        updatePlayerCount();
+    </script>
+</body>
+</html>

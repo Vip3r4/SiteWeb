@@ -1,0 +1,91 @@
+body {
+  background-color: #0a0a0a;
+  font-family: 'Share Tech Mono', monospace;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: url('/images/back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scp-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.scp-404 .titre {
+  font-size: 120px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #d32f2f, 0 0 20px #ff0000;
+  animation: glitch 2s infinite;
+}
+
+.scp-404 .document {
+  background: rgba(20,20,20,0.7);
+  border: 2px solid rgba(255,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.scp-404 a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #ff0000, -2px 0 #00fff0; }
+  20% { text-shadow: -2px 0 #ff0000, 2px 0 #00fff0; }
+  40% { text-shadow: 2px 0 #ff0000, -2px 0 #00fff0; }
+  60% { text-shadow: -2px 0 #ff0000, 2px 0 #00fff0; }
+  80% { text-shadow: 2px 0 #ff0000, -2px 0 #00fff0; }
+  100% { text-shadow: 2px 0 #ff0000, -2px 0 #00fff0; }
+}
+
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        rgba(0, 0, 0, 0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        rgba(0,0,0,0.05) 2px,
+        rgba(0,0,0,0.05) 4px
+    );
+    z-index: 5;
+    animation: scan 1s linear infinite;
+}
+
+@keyframes scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.scanlines::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: flashLine 3s linear infinite;
+}
+
+@keyframes flashLine {
+    0%   { top: -2%; opacity: 0; }
+    10%  { opacity: 0.8; }
+    50%  { top: 100%; opacity: 0; }
+    100% { top: 100%; opacity: 0; }
+}

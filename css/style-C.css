@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Science+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Science+Gothic&family=Varela&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* ------------------ TOP PAGE ------------------ */
+.top-page {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ------------------ BODY & HTML ------------------ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-image: url('/images/back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ------------------ PARTICLES ------------------ */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(135deg, #111, #000);
+}
+
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    margin-right: 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar nav {
+    margin-right: 40px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+}
+
+.navbar a.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------ HERO ------------------ */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+}
+
+.hero .title {
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: 20px;
+    margin: 0 0 50px 0;
+    margin-left: 10px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero .subtitle {
+    font-size: 20px;
+    color: #bbb;
+    margin: 0 0 30px 0;
+    animation: fadeInUp 1.6s ease forwards;
+}
+
+.hero .line {
+    font-size: 20px;
+    color: #bbb;
+    margin: 0 0 30px 0;
+    animation: fadeInUp 2.2s ease forwards;
+}
+
+/* ------------------ IMAGE LOGOS ------------------ */
+.hero .images {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.hero .images .image-wrapper {
+    display: flex;
+    flex-direction: column; /* texte sous l'image */
+    align-items: center;
+}
+
+.hero .images a img, .hero .images button img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hero .images a img:hover, .hero .images button img:hover {
+    transform: scale(1.1);
+}
+
+.hero .images .image-text {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.hero .images a img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 0.8s forwards;
+}
+
+.hero .images .image-text {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 0.8s forwards;
+}
+
+.hero .images .image-wrapper:nth-child(1) img {
+    animation-delay: 1s;
+}
+.hero .images .image-wrapper:nth-child(1) .image-text {
+    animation-delay: 1.2s;
+}
+
+.hero .images .image-wrapper:nth-child(2) img {
+    animation-delay: 1.4s;
+}
+.hero .images .image-wrapper:nth-child(2) .image-text {
+    animation-delay: 1.6s;
+}
+/* ------------------ CURSOR ------------------ */
+.circle {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#copy-notification {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+#copy-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Scanline effet */
+
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        rgba(0,0,0,0.05) 2px,
+        rgba(0,0,0,0.05) 4px
+    );
+    z-index: 5;
+    animation: scan 1s linear infinite;
+}
+
+/* Animation de défilement des lignes fines */
+@keyframes scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+/* Ligne flash qui apparaît de temps en temps */
+.scanlines::after {
+    content: '';
+    position: absolute;
+    top: -10%;               /* start au-dessus */
+    left: 0;
+    width: 100%;
+    height: 2px;             /* ligne épaisse */
+    background: rgba(255, 255, 255, 0.3);
+    animation: flashLine 3s linear infinite;
+}
+
+@keyframes flashLine {
+    0%   { top: -2%; opacity: 0; }
+    10%  { opacity: 0.8; }
+    50%  { top: 100%; opacity: 0; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 15px 0;
+    margin-right: 0;
+  }
+
+  .navbar nav {
+    margin-right: 0;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

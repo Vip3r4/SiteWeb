@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-C.css">
+    <title>Site-Delta DarkRP - Contact</title>
+</head>
+
+<body>
+
+    <canvas id="particles"></canvas>
+    <div class="scanlines"></div>
+
+    <div class="landing-page">
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+
+    <section class="top-page">
+
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo du site">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="news.html">Nouveautés</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1 class="title">Contact</h1>
+            <p class="subtitle">Voici les différents moyens de nous contacter.</p>
+            <h1 class="line">‒‒‒‒‒‒‒‒‒‒‒‒‒</h1>
+
+            <div class="images">
+            <div class="image-wrapper">
+                <a href="https://discord.gg/bhrFV2v9FF" target="_blank">
+                    <img src="images/discord.webp" alt="Discord">
+                </a>
+                <p class="image-text">Rejoignez-nous sur Discord</p>
+            </div>
+            <div class="image-wrapper">
+                <a href="#" onclick="copyEmail('sitedeltadarkrp@gmail.com'); return false;">
+                    <img src="images/mail.png" alt="Mail">
+                </a>
+                <p class="image-text">Contactez nous par mail</p>
+            </div>
+        <script>
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    const notification = document.getElementById('copy-notification');
+                    notification.classList.add('show');
+
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 2000);
+                })
+                .catch(() => {
+                    alert("Impossible de copier l'email");
+                });
+        }
+        </script>
+        <div id="copy-notification">Email copié !</div>
+        
+        </section>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Site-Delta DarkRP. Tous droits réservés. | Fondé par Ysuzen et Vip3r le 01/10/2025</p>
+    </footer>
+
+    <script src="mouseanimation.js"></script>
+    <script src="particle.js"></script>
+</body>
+</html>

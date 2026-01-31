@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Varela&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.top-page {
+    position: relative;
+    min-height: 18vh;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-image: url('/images/back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 80px;
+    background-color: #000000;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    margin-right: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar nav {
+    margin-right: 40px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+}
+
+.navbar a.active {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+    height: 45vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+}
+
+.hero .title {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 15px;
+    margin: 0 0 50px 0;
+    margin-left: 10px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero .line {
+    font-size: 20px;
+    color: #bbb;
+    margin: 0 0 30px 0;
+    animation: fadeInUp 2.2s ease forwards;
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #000000;
+}
+
+.qui {
+  position: relative;
+  margin: -110px auto;
+  max-width: 1000px;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 3.4s ease forwards;
+}
+
+.qui .titre {
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.qui .description {
+  font-size: 16px;
+  padding: 0px 20px 10px;
+}
+
+.staff {
+  position: relative;
+  margin: 130px auto;
+  max-width: 1000px;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 4.6s ease forwards;
+}
+
+.staff .titre {
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.staff .description {
+  font-size: 16px;
+  padding: 0px 20px 10px;
+}
+
+.staff .liste {
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.ml {
+  position: relative;
+  margin: -110px auto;
+  max-width: 1000px;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 5.8s ease forwards;
+}
+
+.ml .titre {
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.ml .section {
+  margin-bottom: 20px;
+}
+
+.ml h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.ml p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;  
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+}
+  
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        rgba(0, 0, 0, 0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        rgba(0,0,0,0.05) 2px,
+        rgba(0,0,0,0.05) 4px
+    );
+    z-index: 5;
+    animation: scan 1s linear infinite;
+}
+
+@keyframes scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.scanlines::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: flashLine 3s linear infinite;
+}
+
+@keyframes flashLine {
+    0%   { top: -2%; opacity: 0; }
+    10%  { opacity: 0.8; }
+    50%  { top: 100%; opacity: 0; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 15px 0;
+    margin-right: 0;
+  }
+
+  .navbar nav {
+    margin-right: 0;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

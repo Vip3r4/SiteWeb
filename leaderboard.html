@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-L.css">
+    <title>Site-Delta DarkRP - Leaderboard</title>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <canvas id="particles"></canvas>
+    <div class="scanlines"></div>
+
+    <div class="landing-page">
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+
+    <section class="top-page">
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo du site">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="news.html">Nouveautés</a></li>
+                    <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <h2>Leaderboard temps de jeu</h2>
+
+    <div id="leaderboard">
+        Chargement...
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Site-Delta DarkRP. Tous droits réservés. | Fondé par Ysuzen et Vip3r le 01/10/2025</p>
+    </footer>
+
+    <script src="mouseanimation.js"></script>
+    <script src="particle.js"></script>
+    <script>
+        async function loadLeaderboard() {
+            try {
+                const res = await fetch("https://api.sitedeltadarkrp.fr/leaderboard");
+                const data = await res.json();
+
+                const container = document.getElementById("leaderboard");
+                container.innerHTML = "";
+
+                if (data.length === 0) {
+                    container.innerHTML = "<p>Aucune donnée.</p>";
+                    return;
+                }
+
+                data.forEach((player, index) => {
+                    const hours = Math.floor(player.totalPlayTime / 3600);
+                    const minutes = Math.floor((player.totalPlayTime % 3600) / 60);
+
+                    container.innerHTML += `
+                        <div class="leaderboard-row">
+                            <span class="rank">#${index + 1}</span>
+                            <span class="pseudo">${player.pseudo}</span>
+                            <span class="time">${hours}h ${minutes}m</span>
+                        </div>
+                    `;
+                });
+
+            } catch (err) {
+                document.getElementById("leaderboard").innerHTML =
+                    "<p>Erreur de chargement du leaderboard</p>";
+                console.error(err);
+            }
+        }
+
+        loadLeaderboard();
+
+        setInterval(loadLeaderboard, 30000);
+</script>
+</body>
+</html>

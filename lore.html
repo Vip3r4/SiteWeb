@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Site-Delta DarkRP - Wiki</title>
+  <link rel="stylesheet" href="css/style-lore.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="landing-page">
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+        <div class="cursor">
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+            <div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div><div class="circle"></div>
+        </div>
+    </div>
+    <section class="top-page">
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo du site">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wiki.html" class="active">Wiki</a></li>
+                    <li><a href="news.html">Nouveautés</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <input TYPE="button" VALUE="↩︎" onClick=" history.back();" class="return">
+
+    <div class="rules-container">
+
+        <h1 class="rules-title">Lore Du Serveur</h1>
+        <p class="rules-desc">Archives internes - Accès surveillé</p>
+
+        <div class="scp-featured">
+
+            <a href="site∆.html" class="scp-folder">Site-∆</a>
+
+        </div>
+
+        <h2 class="category-title">SCP</h2>
+        <div class="scp-grid">
+
+            <a href="scp371d.html" class="scp-folder">SCP-371-∆</a>
+
+        </div>
+
+        <h2 class="category-title">Groupes d'intérêts</h2>
+        <div class="scp-grid">
+
+            <a href="fim35.html" class="scp-folder">FIM Delta-35 — "Guides des Chiens Perdus"</a>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Site-Delta DarkRP. Tous droits réservés. | Fondé par Ysuzen et Vip3r le 01/10/2025</p>
+    </footer>
+    <script src="mouseanimation.js"></script>
+    <script>
+        document.querySelectorAll('.section-title').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parent = btn.parentElement;
+            parent.classList.toggle('active');
+        });
+        });
+
+        document.querySelectorAll('.role-title').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parent = btn.parentElement;
+            parent.classList.toggle('active');
+        });
+        });
+    </script>
+</body>
+</html>
