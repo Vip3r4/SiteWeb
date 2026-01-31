@@ -354,19 +354,13 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    position: relative;
-    padding: 15px 0;
-    margin-right: 0;
-  }
 
-  .navbar nav {
-    margin-right: 0;
+  .hero .title {
+    font-size: 20px;
+    letter-spacing: 10px;
   }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  
+  .hero .line {
+    font-size: 20px;
   }
 }
