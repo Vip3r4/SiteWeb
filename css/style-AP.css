@@ -153,7 +153,7 @@ body, html {
   border-radius: 15px;
   border: 2px solid rgba(255,255,255,0.2);
   backdrop-filter: blur(20px);
-  animation: fadeInUp 3.4s ease forwards;
+  animation: fadeInUp 2.4s ease forwards;
 }
 
 .qui .titre {
@@ -179,7 +179,7 @@ body, html {
   border-radius: 15px;
   border: 2px solid rgba(255,255,255,0.2);
   backdrop-filter: blur(20px);
-  animation: fadeInUp 4.6s ease forwards;
+  animation: fadeInUp 2.6s ease forwards;
 }
 
 .staff .titre {
@@ -212,7 +212,7 @@ body, html {
   border-radius: 15px;
   border: 2px solid rgba(255,255,255,0.2);
   backdrop-filter: blur(20px);
-  animation: fadeInUp 5.8s ease forwards;
+  animation: fadeInUp 2.8s ease forwards;
 }
 
 .ml .titre {
@@ -239,6 +239,51 @@ body, html {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
 }
+
+.rgpd {
+  position: relative;
+  margin: 130px auto;
+  max-width: 1000px;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  animation: fadeInUp 3.0s ease forwards;
+}
+
+.rgpd .titre {
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.rgpd .section {
+  margin-bottom: 20px;
+}
+
+.rgpd h3 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.rgpd p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.rgpd li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 
 .cursor {
   pointer-events: none;
