@@ -373,15 +373,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-    font-size: 16px;
-    background-color: #000;
-  }
-
-  * {
-    max-width: 100%;
-  }
 
   .nav {
     width: 100%;
