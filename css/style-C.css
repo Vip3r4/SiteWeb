@@ -362,8 +362,12 @@ body, html {
     text-align: right;
   }
 
-  .title {
+  .hero .title {
     font-size: 20px;
     letter-spacing: 10px;
+  }
+
+  .hero {
+    height: 130vh;
   }
 }
