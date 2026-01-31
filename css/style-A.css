@@ -303,19 +303,28 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    position: relative;
-    padding: 15px 0;
-    margin-right: 0;
+  body {
+    overflow-x: hidden;
+    font-size: 16px;
   }
 
-  .navbar nav {
-    margin-right: 0;
+  * {
+    max-width: 100%;
+  }
+  .container,
+  .content,
+  .main,
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  .desktop-only,
+  .animation,
+  .background-video {
+    display: none;
   }
 
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  button, a {
+    padding: 12px 16px;
   }
 }
