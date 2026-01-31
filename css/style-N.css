@@ -371,3 +371,43 @@ body {
     margin: 0;
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: #000;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .nav li {
+    text-align: right;
+  }
+
+  .hero .title {
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+
+  .hero {
+    height: 130vh;
+  }
+}
