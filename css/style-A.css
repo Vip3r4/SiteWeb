@@ -314,6 +314,7 @@ body, html {
   .container,
   .content,
   .main,
+  .nav,
   .section {
     display: flex;
     flex-direction: column;
