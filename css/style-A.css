@@ -330,13 +330,19 @@ body, html {
   }
 
   .nav {
-    display: block;
+    width: 100%;
   }
 
   .nav ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    padding-right: 16px;
     gap: 12px;
+  }
+
+  .nav li {
+    text-align: right;
   }
 
   .title {
